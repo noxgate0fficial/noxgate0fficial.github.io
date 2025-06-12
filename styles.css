@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #222;
+  color: #eee;
+}
+
+/* Header and Footer (used on index and multi-page views) */
+header,
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #333;
+}
+
+footer {
+  font-size: 0.8em;
+}
+
+/* Home Page Game Grid (for index page view) */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(75px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: #444;
+  text-decoration: none;
+  color: #eee;
+  font-size: 1.2em;
+  border: 2px solid #666;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.game-tile:hover {
+  transform: scale(1.05);
+  background: #555;
+}
+
+/* Subpage Home Button (for game pages with navigation) */
+.home-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.home-button a {
+  text-decoration: none;
+  background: #444;
+  padding: 10px 15px;
+  color: #eee;
+  border: 2px solid #666;
+}
+
+/* Game Container and Border (for game page view) */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.game-border {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  border: 8px solid #666;
+  box-shadow: 0 0 10px #000;
+  background: #000;
+}
+
+.game-border iframe {
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+
+/* Fullscreen styling with vendor prefixes targeting the game element.
+   In fullscreen, the border and box shadow are removed.
+*/
+.game-border:fullscreen,
+.game-border:-webkit-full-screen,
+.game-border:-moz-full-screen,
+.game-border:-ms-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  box-shadow: none;
+}
+
+/* Fullscreen Button */
+#fullscreenBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #444;
+  color: #eee;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 2px solid #666;
+}
+
+#fullscreenBtn:hover {
+  background: #555;
+}
+
+/* Additional rules for game-only views (if needed)
+   Uncomment or apply these styles when you want to hide other elements.
+*/
+/*
+body.game-only {
+  background: #000;
+  overflow: hidden;
+}
+
+header,
+footer,
+.home-button,
+.game-grid {
+  display: none;
+}
+*/
