@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
 
-
 /* General Styles */
 body {
   margin: 0;
@@ -194,3 +193,39 @@ footer,
   display: none;
 }
 */
+
+/* ====== Copilot: Category section styling ====== */
+.game-categories {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 30px 0;
+  max-width: 1100px;
+}
+
+.game-category {
+  margin-bottom: 2em;
+}
+
+.game-category h2 {
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+  border-left: 5px solid #666;
+  padding-left: 12px;
+}
+
+/* Optional: add a little vertical space between categories on small screens */
+@media (max-width: 700px) {
+  .game-category {
+    margin-bottom: 1.2em;
+  }
+  .game-category h2 {
+    font-size: 1.2em;
+    padding-left: 7px;
+    margin-top: 1em;
+  }
+}
+
