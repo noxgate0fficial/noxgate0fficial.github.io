@@ -52,9 +52,20 @@
       stroke: #fff;
       fill: none;
     }
+    /* New: style for clickable image next to search bar */
+    .clickable-img {
+      height: 40px;
+      width: auto;
+      margin-right: 8px;
+      cursor: pointer;
+      display: block;
+    }
     @media (max-width: 600px) {
       .search-input {
         width: 120px;
+      }
+      .clickable-img {
+        height: 28px;
       }
     }
     .game-category {
@@ -75,6 +86,9 @@
       <h1 class="header-title">Noxgate Gaming V2.41</h1>
       <h2>for best experience, fullscreen  |  current trending game:AI</h2>
       <div class="search-icon-container">
+        <a href="chat.html">
+          <img src="images2.jpg" alt="Chat" class="clickable-img">
+        </a>
         <input type="text" id="gameSearch" class="search-input" placeholder="Search for games...">
         <button class="search-icon" id="toggleSearch" aria-label="Search">
           <!-- Simple magnifying glass SVG icon -->
